@@ -1,0 +1,25 @@
+<div class="product-list">
+    <div *ngFor="let product of products" class="product-item">
+        <!-- Product Card -->
+        <div class="product-card" (click)="goToProductDetailsPage(product.id)">
+            <img class="product-image" [src]="product.imageUrl" [alt]="product.name">
+            <h3 class="product-name">{{ product.name }}</h3>
+            <p class="product-description">{{ product.description }}</p>
+            <span class="product-price">{{ product.price.toFixed(2) | currency }}</span>
+        </div>
+
+        <!-- Cart Controls or Add to Cart Button -->
+        <ng-container *ngIf="inInCart(product); else addToCartBtn">
+            <div class="quantity-controls">
+                <button class="quantity-btn decrement" (click)="decrementItem(product)">-</button>
+                <span class="quantity">{{ getCartItem(product)?.quantity }}</span>
+                <button class="quantity-btn increment" (click)="incrementItem(product)">+</button>
+            </div>
+        </ng-container>
+
+        <!-- Add to Cart Button -->
+        <ng-template #addToCartBtn>
+            <button class="add-to-cart-btn" (click)="addToCart(product)">Add To Cart</button>
+        </ng-template>
+    </div>
+</div>

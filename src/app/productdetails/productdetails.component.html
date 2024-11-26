@@ -1,0 +1,30 @@
+<div class="product-details" *ngIf="product; else loading">
+    <!-- Product Image -->
+    <img class="product-image" [src]="product?.imageUrl" [alt]="product?.name" />
+
+    <!-- Product Info -->
+    <div class="product-info">
+        <h3 class="product-name">{{ product?.name }}</h3>
+        <p class="product-description">{{ product?.description }}</p>
+        <span class="product-price">${{ product.price.toFixed(2) }}</span>
+    </div>
+
+    <!-- Cart Controls -->
+    <ng-container *ngIf="cartItem; else addToCartBtn">
+        <div class="quantity-controls">
+            <button class="quantity-btn decrement" (click)="decrementItem()">-</button>
+            <span class="quantity">{{ cartItem.quantity }}</span>
+            <button class="quantity-btn increment" (click)="incrementItem()">+</button>
+        </div>
+    </ng-container>
+
+    <!-- Add to Cart Button -->
+    <ng-template #addToCartBtn>
+        <button class="add-to-cart-btn" (click)="addToCart()">Add To Cart</button>
+    </ng-template>
+</div>
+
+<!-- Loading Template -->
+<ng-template #loading>
+    <p class="loading-text">Loading product details...</p>
+</ng-template>

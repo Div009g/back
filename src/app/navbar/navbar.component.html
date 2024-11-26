@@ -1,0 +1,19 @@
+<nav class="navbar">
+    <a routerLink="/" class="logo">
+        <img src="https://cdn.dribbble.com/users/77598/screenshots/14244078/media/f64d9574b915b61ed3ae5e22a396d013.gif" alt="Logo" />
+    </a>
+    <!-- Search Form -->
+    <form (submit)="handleSearchSubmit()" class="search-form">
+        <input type="text" placeholder="Search product ..." name="searchValue" [(ngModel)]="searchValue" />
+        <button type="submit">Search</button>
+    </form>
+    <div class="nav-links">
+        <a routerLink="/">Home</a>
+        <a routerLink="/categories">Category</a>
+        <a *ngIf="isAuthenticated" routerLink="/profile">Account</a>
+        <a *ngIf="isAdmin" routerLink="/admin">Admin</a>
+        <a *ngIf="!isAuthenticated" routerLink="/login">Login</a>
+        <a *ngIf="isAuthenticated" (click)="handleLogout()">Logout</a>
+        <a routerLink="/cart">Cart</a>
+    </div>
+</nav>

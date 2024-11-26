@@ -1,0 +1,129 @@
+/* Profile Component Styling */
+.profile {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Heading */
+.profile-heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333333;
+}
+
+/* Error Message */
+.error-message {
+    color: #ff4d4d;
+    background-color: #ffe6e6;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* User Info Section */
+.user-info p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555555;
+}
+
+/* Address Section */
+.address-section h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+.no-address {
+    color: #888888;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.profile-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.profile-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.profile-button:active {
+    transform: translateY(0);
+}
+
+/* Order History */
+.order-history h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+/* Order List */
+.order-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.order-details p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+/* Pagination */
+app-pagination {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-image {
+        margin-bottom: 10px;
+    }
+}
