@@ -1,0 +1,88 @@
+/* General Container Styling */
+.container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: #f8fafc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #ff4d4d;
+    background-color: #ffe6e6;
+    padding: 15px 20px;
+    border: 1px solid #ffcccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Category Section */
+.category-section {
+    text-align: center;
+}
+
+.category-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333333;
+}
+
+/* Categories List */
+.category-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.category-item {
+    flex: 1 1 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .category-item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Button Styling */
+.category-item button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-item button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.category-item button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}

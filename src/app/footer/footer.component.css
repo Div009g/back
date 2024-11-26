@@ -1,0 +1,55 @@
+/* Footer General Styling */
+.footer {
+    background-color: #2d3e50;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Links Section */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.footer-links a:hover {
+    color: #007bff;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
+}
+
+/* Footer Info Section */
+.footer-info p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-info p {
+        font-size: 0.8rem;
+    }
+}

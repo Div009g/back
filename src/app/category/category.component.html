@@ -1,0 +1,22 @@
+<div class="container">
+    <!-- Error Handling -->
+    <ng-container *ngIf="error; else categoryList">
+        <p class="error-message">{{ error }}</p>
+    </ng-container>
+
+    <!-- Categories List -->
+    <ng-template #categoryList>
+        <div class="category-section">
+            <h2>Categories</h2>
+            <ul class="category-list">
+                <li 
+                    *ngFor="let category of categories" 
+                    (click)="handleCategoryClick(category.id)" 
+                    class="category-item"
+                >
+                    <button>{{ category.name }}</button>
+                </li>
+            </ul>
+        </div>
+    </ng-template>
+</div>
