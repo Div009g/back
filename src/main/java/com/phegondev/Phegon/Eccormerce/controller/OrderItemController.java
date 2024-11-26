@@ -19,6 +19,8 @@ import java.time.LocalDateTime;
 @RestController
 @RequestMapping("/order")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:4200")
+
 public class OrderItemController {
 
     private final OrderItemService orderItemService;
