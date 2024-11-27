@@ -15,7 +15,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
-                        .allowedOrigins("https://your-frontend-url.com");
+                        .allowedOrigins("https://magiccommerce.vercel.app");
             }
         };
     }

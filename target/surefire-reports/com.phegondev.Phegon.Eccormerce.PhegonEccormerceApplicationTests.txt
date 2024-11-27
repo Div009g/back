@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.phegondev.Phegon.Eccormerce.PhegonEccormerceApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.304 s -- in com.phegondev.Phegon.Eccormerce.PhegonEccormerceApplicationTests
